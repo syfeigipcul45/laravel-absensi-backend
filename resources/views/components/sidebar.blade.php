@@ -17,6 +17,18 @@
                 <a class="nav-link"
                     href="{{ url('users') }}"><i class="far fa-user"></i> <span>Users</span></a>
             </li>
+            <li class="nav-item">
+                <a href="{{ route('companies.show', 1) }}" class="nav-link">
+                    <i class="fas fa-columns"></i>
+                    <span>Company</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link">
+                    <i class="fas fa-columns"></i>
+                    <span>Attendances</span>
+                </a>
+            </li>
         </ul>
 
         <div class="hide-sidebar-mini mt-4 mb-4 p-3">
