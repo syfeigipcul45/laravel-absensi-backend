@@ -16,5 +16,14 @@ Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth:sanc
 //company
 Route::get('/company', [CompanyController::class, 'show'])->middleware('auth:sanctum');
 
+//checkin
+Route::post('/checkin', [App\Http\Controllers\Api\AttendanceController::class, 'checkin'])->middleware('auth:sanctum');
+
+//checkout
+Route::post('/checkout', [App\Http\Controllers\Api\AttendanceController::class, 'checkout'])->middleware('auth:sanctum');
+
+//is checkin
+Route::get('/is-checkin', [App\Http\Controllers\Api\AttendanceController::class, 'isCheckedin'])->middleware('auth:sanctum');
+
 //update profile
 Route::post('/update-profile', [AuthController::class, 'updateProfile'])->middleware('auth:sanctum');
