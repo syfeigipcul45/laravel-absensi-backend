@@ -70,11 +70,7 @@
                                             <i class="fas fa-lock"></i>
                                         </div>
                                     </div>
-                                    <input type="password"
-                                        class="form-control @error('password')
-                                is-invalid
-                            @enderror"
-                                        name="password">
+                                    <input type="password" class="form-control @error('password')is-invalid @enderror" name="password">
                                 </div>
                                 @error('password')
                                     <div class="invalid-feedback">
@@ -85,6 +81,14 @@
                             <div class="form-group">
                                 <label>Phone</label>
                                 <input type="number" class="form-control" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label>Position</label>
+                                <input type="text" class="form-control" name="position">
+                            </div>
+                            <div class="form-group">
+                                <label>Department</label>
+                                <input type="text" class="form-control" name="department">
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Roles</label>

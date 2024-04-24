@@ -88,6 +88,14 @@
                                 <input type="number" class="form-control" name="phone" value="{{ $user->phone }}">
                             </div>
                             <div class="form-group">
+                                <label>Position</label>
+                                <input type="text" class="form-control" name="position" value="{{ $user->position }}">
+                            </div>
+                            <div class="form-group">
+                                <label>Department</label>
+                                <input type="text" class="form-control" name="department" value="{{ $user->department }}">
+                            </div>
+                            <div class="form-group">
                                 <label class="form-label">Roles</label>
                                 <div class="selectgroup w-100">
                                     <label class="selectgroup-item">
