@@ -2,11 +2,12 @@
 
 use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.auth.auth-login');
 });
 
 Route::get('/dashboard', function () {
@@ -17,7 +18,7 @@ Route::get('/dashboard', function () {
 //     return view('pages.auth.auth-login');
 // });
 
-Route::middleware(['auth'])->group(function(){
+Route::middleware(['auth'])->group(function () {
     Route::get('home', function(){
         return view('pages.dashboard', ['type_menu' => 'menu']);
     })->name('home');
@@ -25,4 +26,5 @@ Route::middleware(['auth'])->group(function(){
     Route::resource('users', UserController::class);
     Route::resource('companies', CompanyController::class);
     Route::resource('attendances', AttendanceController::class);
+    Route::resource('permissions', PermissionController::class);
 });
